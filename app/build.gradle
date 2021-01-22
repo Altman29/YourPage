@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    def version = rootProject.ext.android
+    compileSdkVersion version.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.altman29.yourpage"
+        minSdkVersion version.minSdkVersion
+        targetSdkVersion version.targetSdkVersion
+        versionCode version.versionCode
+        versionName version.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def dependencies = rootProject.ext.dependencies
+    implementation dependencies.appcomtV7
+    implementation dependencies.material
+    implementation dependencies.constraintlayout
+    implementation dependencies.recycleView
+    implementation dependencies.room
+    implementation dependencies.annotationProcessor_room
+    implementation dependencies.viewmodel
+    implementation dependencies.extensions
+    implementation dependencies.retrofit
+    implementation dependencies.gson
+    implementation dependencies.glide
+    implementation dependencies.swiperefresh
+    implementation dependencies.circleimage
+}

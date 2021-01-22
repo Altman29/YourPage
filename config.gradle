@@ -1,0 +1,50 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            minSdkVersion    : 21,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    version = [
+            supportLibraryVersion: '28.0.0',
+            room                 : "2.2.5",
+            viewmodel            : "2.2.0",
+            extensions           : "2.2.0",
+            retrofit             : "2.6.2",
+            gson                 : "2.6.2",
+            glide                : "4.9.0",
+            swiperefresh         : "1.1.0",
+            circleimage          : "3.0.1",
+            material             : "1.1.0",
+            constraintlayout     : "1.1.3",
+    ]
+
+    dependencies = [
+            //material
+            material                : "com.google.android.material:material:${version["material"]}",
+            //constraintlayout
+            constraintlayout        : "androidx.constraintlayout:constraintlayout:${version["constraintlayout"]}",
+            //appcomtV7
+            appcomtV7               : "com.android.support:appcompat-v7:${version["supportLibraryVersion"]}",
+            //recycleView
+            recycleView             : "com.android.support:recyclerview-v7:${version["supportLibraryVersion"]}",
+            //viewModel
+            //room
+            room                    : "androidx.room:room-runtime:${version["room"]}",
+            annotationProcessor_room: "androidx.room:room-compiler:${version["room"]}",
+            viewmodel               : "androidx.lifecycle:lifecycle-viewmodel:${version["viewmodel"]}",
+            extensions              : "androidx.lifecycle:lifecycle-extensions:${version["extensions"]}",
+            //retrofit
+            retrofit                : "com.squareup.retrofit2:retrofit:${version["retrofit"]}",
+            //gson
+            gson                    : "com.squareup.retrofit2:converter-gson:${version["gson"]}",
+            //glide
+            glide                   : "com.github.bumptech.glide:glide:${version["glide"]}",
+            //下拉刷新
+            swiperefresh            : "androidx.swiperefreshlayout:swiperefreshlayout:${version["swiperefresh"]}",
+            //圆形头像
+            circleimage             : "de.hdodenhof:circleimageview:${version["circleimage"]}"
+    ]
+}
