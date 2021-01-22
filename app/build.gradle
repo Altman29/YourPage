@@ -33,12 +33,9 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     def dependencies = rootProject.ext.dependencies
-    implementation dependencies.appcomtV7
-    implementation dependencies.material
-    implementation dependencies.constraintlayout
-    implementation dependencies.recycleView
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dependencies.appcompatV7
     implementation dependencies.room
     implementation dependencies.annotationProcessor_room
     implementation dependencies.viewmodel
