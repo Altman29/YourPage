@@ -37,7 +37,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation dependencies.appcompatV7
     implementation dependencies.room
-    implementation dependencies.annotationProcessor_room
+    annotationProcessor dependencies.annotationProcessor_room
     implementation dependencies.viewmodel
     implementation dependencies.extensions
     implementation dependencies.retrofit

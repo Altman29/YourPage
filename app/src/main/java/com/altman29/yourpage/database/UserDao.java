@@ -12,7 +12,7 @@ import androidx.room.Query;
 /**
  * Created by Csy on 1/22/21.
  * e-mail:altman29@foxmail.com
- * Desc: Dao
+ * Desc: Dao by room
  */
 @Dao
 public interface UserDao {
